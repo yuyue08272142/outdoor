@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>管理后台 · 山野同行</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body class="admin">
+  <div id="login" class="hidden">
+    <form class="panel login-box" id="loginForm">
+      <h2>⛰ 管理后台登录</h2>
+      <div class="field"><label>管理员密码</label><input type="password" name="password" required autofocus></div>
+      <button class="btn btn-green btn-block">登录</button>
+    </form>
+  </div>
+
+  <div id="shell" class="hidden">
+    <aside class="side">
+      <div class="side-logo">⛰ 管理后台</div>
+      <nav>
+        <a href="#/dashboard" data-nav="dashboard">📊 概览</a>
+        <a href="#/activities" data-nav="activities">🏕 活动管理</a>
+        <a href="#/bookings" data-nav="bookings">📝 报名管理 <span class="count" id="cntBookings"></span></a>
+        <a href="#/inquiries" data-nav="inquiries">💬 咨询答复 <span class="count" id="cntInquiries"></span></a>
+      </nav>
+      <div class="side-foot">
+        <a href="/" target="_blank">查看网站 ↗</a>
+        <button class="linklike" id="logoutBtn">退出登录</button>
+      </div>
+    </aside>
+    <main class="main" id="view"></main>
+  </div>
+
+  <div class="modal hidden" id="modal"><div class="modal-box"><button class="modal-close" id="modalClose" aria-label="关闭">×</button><div id="modalBody"></div></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="/admin/admin.js"></script>
+</body>
+</html>
