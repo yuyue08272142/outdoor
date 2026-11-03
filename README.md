@@ -19,8 +19,8 @@ npm install
 ADMIN_PASSWORD=你的后台密码 npm start
 ```
 
-- 用户端：http://localhost:3000
-- 管理后台：http://localhost:3000/admin/ （未设置 `ADMIN_PASSWORD` 时默认密码为 `admin123`，仅限本地体验）
+- 用户端：http://localhost:3080
+- 管理后台：http://localhost:3080/admin/ （未设置 `ADMIN_PASSWORD` 时默认密码为 `admin123`，仅限本地体验）
 
 首次启动会自动写入 6 个示例活动及档期。重置示例数据：
 
@@ -38,7 +38,7 @@ npm test
 
 | 变量 | 默认值 | 说明 |
 | --- | --- | --- |
-| `PORT` | `3000` | 监听端口 |
+| `PORT` | `3080` | 监听端口（被占用时启动会报错提示，可换端口：`PORT=3081 npm start`） |
 | `ADMIN_PASSWORD` | `admin123` | 后台登录密码，**生产环境必须设置** |
 | `DB_FILE` | `data/outdoor.db` | SQLite 数据库文件路径 |
 | `SITE_NAME` | 山野同行 | 站点名称 |
